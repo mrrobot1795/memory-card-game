@@ -1,24 +1,21 @@
 export const decodeHtmlEntity = (entity: string | string[]): string => {
-  // Handle flag emojis (which come as an array of two codes)
   if (Array.isArray(entity) && entity.length === 2) {
-    const [code1, code2] = entity.map(code => {
+    const [code1, code2] = entity.map((code) => {
       const match = /&#(\d+);/.exec(code);
-      return match ? String.fromCodePoint(parseInt(match[1], 10)) : '';
+      return match ? String.fromCodePoint(parseInt(match[1], 10)) : "";
     });
-    return code1 + code2;  // Combine the two regional indicators
+    return code1 + code2;
   }
 
-  // Handle single emoji code
-  if (typeof entity === 'string') {
+  if (typeof entity === "string") {
     const numericMatch = /&#(\d+);/.exec(entity);
     if (numericMatch) {
       return String.fromCodePoint(parseInt(numericMatch[1], 10));
     }
   }
 
-  // If nothing else works, try using textarea decoding
-  const textarea = document.createElement('textarea');
-  textarea.innerHTML = Array.isArray(entity) ? entity.join('') : entity;
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = Array.isArray(entity) ? entity.join("") : entity;
   return textarea.value;
 };
 

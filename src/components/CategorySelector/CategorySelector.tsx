@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CategorySelectorProps {
   categories: string[];
@@ -19,7 +19,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
         onChange={(e) => onChange(e.target.value)}
       >
         <option value="">Select a category</option>
-        {categories.map(category => (
+        {categories.map((category) => (
           <option key={category} value={category}>
             {category}
           </option>

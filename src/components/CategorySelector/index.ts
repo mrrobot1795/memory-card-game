@@ -1,1 +1,1 @@
-export * from './CategorySelector';
+export * from "./CategorySelector";

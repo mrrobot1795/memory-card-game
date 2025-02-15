@@ -2,9 +2,11 @@
   --primary-color: #4361ee;
   --secondary-color: #48bfe3;
   --accent-color: #7209b7;
-  --background-color: #f8f9fa;
-  --text-color: #2b2d42;
-  --shadow-color: rgba(67, 97, 238, 0.15);
+  --background-color: #1a1b1e;
+  --surface-color: #2d2e32;
+  --text-color: #e9ecef;
+  --text-color-secondary: #adb5bd;
+  --shadow-color: rgba(0, 0, 0, 0.3);
   --gradient-primary: linear-gradient(135deg, #4361ee, #48bfe3);
   --gradient-secondary: linear-gradient(135deg, #7209b7, #3f37c9);
 }
@@ -22,8 +24,8 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   background-image: 
-    radial-gradient(circle at 1% 1%, rgba(67, 97, 238, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 99% 99%, rgba(72, 191, 227, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 1% 1%, rgba(67, 97, 238, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 99% 99%, rgba(72, 191, 227, 0.1) 0%, transparent 50%);
 }
 
 .app-container {
@@ -41,7 +43,7 @@ body {
   }
 
   .app-header {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--surface-color);
     backdrop-filter: blur(10px);
     padding: 1.2rem;
     box-shadow: 0 4px 20px var(--shadow-color);
@@ -49,6 +51,7 @@ body {
     top: 0;
     z-index: 1000;
     text-align: center; // Add this to center the content
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
     h1 {
       background: var(--gradient-primary);
@@ -61,6 +64,7 @@ body {
       margin: 0 auto; // Center horizontally
       display: inline-block; // Proper gradient text display
       position: relative; // For additional decorative elements
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       
       // Optional: Add decorative elements
       &::after {
@@ -73,7 +77,7 @@ body {
         height: 3px;
         background: var(--gradient-primary);
         border-radius: 2px;
-        opacity: 0.7;
+        opacity: 0.5;
       }
 
       // Add hover animation
@@ -85,14 +89,15 @@ body {
   }
 
   .app-footer {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--surface-color);
     backdrop-filter: blur(10px);
     padding: 1.2rem;
     text-align: center;
     box-shadow: 0 -4px 20px var(--shadow-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     
     p {
-      color: var(--text-color);
+      color: var(--text-color-secondary);
       font-size: 0.9rem;
       opacity: 0.8;
       font-weight: 500;
@@ -136,5 +141,5 @@ html {
 // Add selection styles
 ::selection {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color);
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import { formatTime } from '@/utils/gameUtils';
-import './LossOverlay.scss';
+import React from "react";
+import { formatTime } from "@/utils/gameUtils";
+import "./LossOverlay.scss";
 
 interface LossOverlayProps {
   timeLimit: number;
@@ -15,7 +15,7 @@ export const LossOverlay: React.FC<LossOverlayProps> = ({
   elapsedTime,
   moves,
   onPlayAgain,
-  onNewGame
+  onNewGame,
 }) => (
   <div className="loss-overlay">
     <div className="loss-content">
