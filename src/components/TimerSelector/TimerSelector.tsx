@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export const TIME_OPTIONS = [
-  { value: 0, label: 'No Time Limit' },
-  { value: 60, label: '1 Minute' },
-  { value: 120, label: '2 Minutes' },
-  { value: 180, label: '3 Minutes' },
-  { value: 300, label: '5 Minutes' },
+  { value: 0, label: "No Time Limit" },
+  { value: 60, label: "1 Minute" },
+  { value: 120, label: "2 Minutes" },
+  { value: 180, label: "3 Minutes" },
+  { value: 300, label: "5 Minutes" },
 ];
 
 interface TimerSelectorProps {

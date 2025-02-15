@@ -31,7 +31,9 @@ export const GameStats: React.FC<GameStatsProps> = ({
     </div>
     <div className="stat-item">
       <h3>Pairs</h3>
-      <p>{pairsFound} / {totalPairs}</p>
+      <p>
+        {pairsFound} / {totalPairs}
+      </p>
     </div>
   </div>
 );

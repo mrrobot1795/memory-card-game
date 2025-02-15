@@ -6,7 +6,7 @@
   min-height: 80vh;
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #f6f9fc 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #13151a 0%, #1a1b1e 100%);
   position: relative;
   overflow: hidden;
 
@@ -17,7 +17,7 @@
     width: 1000px;
     height: 1000px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(67, 97, 238, 0.05), rgba(72, 191, 227, 0.05));
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.03), rgba(72, 191, 227, 0.03));
     animation: float 20s infinite linear;
     z-index: 0;
   }
@@ -43,7 +43,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1;
     animation: slideDown 0.6s ease-out;
@@ -62,10 +62,10 @@
   }
 
   .selection-container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(45, 46, 50, 0.95);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 500px;
     margin-bottom: 2rem;
@@ -76,7 +76,7 @@
 
     h2 {
       font-size: 2rem;
-      background: linear-gradient(135deg, #2b2d42, #4361ee);
+      background: linear-gradient(135deg, #e9ecef, #adb5bd);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -96,32 +96,34 @@
         width: 100%;
         padding: 1.2rem 1.8rem;
         font-size: 1.3rem;
-        border: 2px solid rgba(67, 97, 238, 0.2);
+        border: 2px solid rgba(67, 97, 238, 0.1);
         border-radius: 12px;
-        background: white;
+        background: #2d2e32;
         appearance: none;
         cursor: pointer;
         transition: all 0.3s ease;
         text-align: center;
         text-align-last: center;
-        color: #2b2d42;
+        color: #e9ecef;
         font-weight: 500;
 
         &:hover {
           border-color: #4361ee;
           transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+          box-shadow: 0 5px 15px rgba(67, 97, 238, 0.15);
         }
 
         &:focus {
           border-color: #4361ee;
           outline: none;
-          box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+          box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
         }
 
         option {
           text-align: center;
           padding: 1rem;
+          background: #2d2e32;
+          color: #e9ecef;
         }
       }
 
@@ -148,21 +150,21 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: white;
-    background: linear-gradient(135deg, #4361ee, #48bfe3);
+    background: linear-gradient(135deg, #3a0ca3, #4361ee);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
     position: relative;
     z-index: 1;
     animation: slideUp 0.6s ease-out 0.2s backwards;
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4);
+      box-shadow: 0 15px 30px rgba(67, 97, 238, 0.3);
     }
 
     &:active {
@@ -187,7 +189,7 @@
 
     p {
       font-size: 1.4rem;
-      color: #4361ee;
+      color: #e9ecef;
       font-weight: 500;
     }
   }

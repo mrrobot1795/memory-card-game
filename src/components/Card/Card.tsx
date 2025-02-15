@@ -10,10 +10,12 @@ interface CardProps {
 
 const CardComponent: React.FC<CardProps> = ({ card, onClick, style }) => {
   const cardClasses = [
-    'card',
-    card.isFlipped ? 'flipped' : '',
-    card.isMatched ? 'matched' : ''
-  ].filter(Boolean).join(' ');
+    "card",
+    card.isFlipped ? "flipped" : "",
+    card.isMatched ? "matched" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <button
@@ -24,9 +26,7 @@ const CardComponent: React.FC<CardProps> = ({ card, onClick, style }) => {
     >
       <div className="card-inner">
         <div className="card-front" />
-        <div className="card-back">
-          {card.emoji}
-        </div>
+        <div className="card-back">{card.emoji}</div>
       </div>
     </button>
   );

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import CardComponent from '../Card/Card.tsx';
-import { Card } from '@/types/types.ts';
-import './Board.scss';
+import React, { useEffect, useState } from "react";
+import CardComponent from "../Card/Card.tsx";
+import { Card } from "@/types/types.ts";
+import "./Board.scss";
 
 interface BoardProps {
   cards: Card[];
@@ -12,19 +12,18 @@ const Board: React.FC<BoardProps> = ({ cards, onCardClick }) => {
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
-    // Add animation class after initial render
     setIsAnimated(true);
   }, []);
 
   return (
-    <div className={`board ${isAnimated ? 'animated' : ''}`}>
+    <div className={`board ${isAnimated ? "animated" : ""}`}>
       {cards.map((card, index) => (
-        <CardComponent 
-          key={card.id} 
-          card={card} 
+        <CardComponent
+          key={card.id}
+          card={card}
           onClick={() => onCardClick(card)}
           style={{
-            animationDelay: `${index * 0.1}s`
+            animationDelay: `${index * 0.1}s`,
           }}
         />
       ))}

@@ -1,9 +1,14 @@
 // src/App.tsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import StartPage from './pages/StartPage.tsx';
-import GamePage from './pages/GamePage.tsx';
-import './styles/global.scss';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import StartPage from "./pages/StartPage.tsx";
+import GamePage from "./pages/GamePage.tsx";
+import "./styles/global.scss";
 
 const AppHeader: React.FC = () => (
   <header className="app-header">
@@ -13,7 +18,9 @@ const AppHeader: React.FC = () => (
 
 const AppFooter: React.FC = () => (
   <footer className="app-footer">
-    <p>&copy; {new Date().getFullYear()} Memory Card Game. All rights reserved.</p>
+    <p>
+      &copy; {new Date().getFullYear()} Memory Card Game. All rights reserved.
+    </p>
   </footer>
 );
 
@@ -24,17 +31,22 @@ const App: React.FC = () => {
         <AppHeader />
         <main className="content">
           <Routes>
-            <Route path="/" element={
-              <div className="page-transition">
-                <StartPage />
-              </div>
-            } />
-            <Route path="/game/:category" element={
-              <div className="page-transition">
-                <GamePage />
-              </div>
-            } />
-            {/* Catch invalid routes */}
+            <Route
+              path="/"
+              element={
+                <div className="page-transition">
+                  <StartPage />
+                </div>
+              }
+            />
+            <Route
+              path="/game/:category"
+              element={
+                <div className="page-transition">
+                  <GamePage />
+                </div>
+              }
+            />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

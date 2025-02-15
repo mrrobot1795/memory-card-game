@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Emoji } from "@/types";
+import { Emoji } from "@/types/types";
+
 export const useEmojis = () => {
   const [categories, setCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
