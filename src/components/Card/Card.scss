@@ -3,6 +3,8 @@
   perspective: 1000px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none; // Add this to remove any default outline
+  border: none; // Add this to remove any default border
 
   &:hover:not(.flipped) {
     transform: translateY(-8px) scale(1.02);
@@ -15,6 +17,7 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; // Add this to remove any outline
   }
 
   &.flipped .card-inner {
@@ -34,6 +37,8 @@
     border-radius: 15px;
     user-select: none;
     transition: all 0.3s ease;
+    outline: none; // Add this to remove any outline
+    border: none; // Add this to remove any border
   }
 
   .card-front {

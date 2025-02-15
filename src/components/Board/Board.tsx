@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import CardComponent from './Card.tsx';
-import { Card } from '../types';
+import CardComponent from '../Card/Card.tsx';
+import { Card } from '@/types/types.ts';
 import './Board.scss';
 
 interface BoardProps {

@@ -1,5 +1,5 @@
 export interface Card {
-    id: number;
+    id: string;
     emoji: string;
     isFlipped: boolean;
     isMatched: boolean;
@@ -9,7 +9,6 @@ export interface Card {
     name: string;
     category: string;
     group: string;
-    htmlCode: string[];
+    htmlCode: string[];  // Note: this is an array of codes
     unicode: string[];
   }
-  

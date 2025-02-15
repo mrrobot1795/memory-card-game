@@ -7,7 +7,7 @@ import './styles/global.scss';
 
 const AppHeader: React.FC = () => (
   <header className="app-header">
-    <h1>Shashidhar's Memory Card Game</h1>
+    <h1>Memory Card Game</h1>
   </header>
 );
 
