@@ -1,0 +1,65 @@
+.victory-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease;
+
+  .victory-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    animation: scaleIn 0.5s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+
+    h2 {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #2b2d42;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+  }
+}

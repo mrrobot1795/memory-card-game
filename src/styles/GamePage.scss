@@ -1,3 +1,5 @@
+@import './animations.scss';
+
 .game-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -8,7 +10,7 @@
   .game-header {
     margin-bottom: 3rem;
     animation: slideDown 0.6s ease-out;
-    
+
     h1 {
       font-size: 3rem;
       background: linear-gradient(135deg, #4361ee, #48bfe3);
@@ -33,52 +35,12 @@
         border-radius: 2px;
       }
     }
-
-    .game-stats {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      animation: slideUp 0.6s ease-out 0.2s backwards;
-
-      .stat-item {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 1.5rem 2.5rem;
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(67, 97, 238, 0.1);
-        backdrop-filter: blur(10px);
-        transition: transform 0.3s ease;
-        
-        &:hover {
-          transform: translateY(-5px);
-        }
-        
-        h3 {
-          margin: 0;
-          color: #4361ee;
-          font-size: 1rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-weight: 600;
-        }
-        
-        p {
-          margin: 0.5rem 0 0;
-          font-size: 2rem;
-          font-weight: 700;
-          background: linear-gradient(135deg, #2b2d42, #4361ee);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-        }
-      }
-    }
   }
 
   .game-controls {
     margin: 2rem 0;
     animation: slideUp 0.6s ease-out 0.4s backwards;
-    
+
     button {
       padding: 1rem 2.5rem;
       font-size: 1.1rem;
@@ -90,23 +52,23 @@
       margin: 0 1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      
+
       &.restart-btn {
         background: linear-gradient(135deg, #e74c3c, #c0392b);
         color: white;
         box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
-        
+
         &:hover {
           transform: translateY(-3px);
           box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
         }
       }
-      
+
       &.new-game-btn {
         background: linear-gradient(135deg, #2ecc71, #27ae60);
         color: white;
         box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-        
+
         &:hover {
           transform: translateY(-3px);
           box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
@@ -143,7 +105,6 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       max-width: 600px;
       width: 100%;
-      text-align: center;
 
       h2 {
         background: linear-gradient(135deg, #2ecc71, #27ae60);
@@ -189,66 +150,12 @@
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes scaleIn {
-  from { 
-    transform: scale(0.8) translateY(20px);
-    opacity: 0;
-  }
-  to { 
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from { 
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to { 
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from { 
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to { 
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 768px) {
   .game-container {
     padding: 1rem;
 
-    .game-header {
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      .game-stats {
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        .stat-item {
-          padding: 1rem 1.5rem;
-          flex: 1 1 calc(50% - 1rem);
-
-          p {
-            font-size: 1.5rem;
-          }
-        }
-      }
+    .game-header h1 {
+      font-size: 2.2rem;
     }
 
     .game-controls button {

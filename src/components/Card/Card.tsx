@@ -1,5 +1,5 @@
 import React from "react";
-import { Card as CardType } from "../types";
+import { Card as CardType } from "@/types/types";
 import "./Card.scss";
 
 interface CardProps {
@@ -16,10 +16,11 @@ const CardComponent: React.FC<CardProps> = ({ card, onClick, style }) => {
   ].filter(Boolean).join(' ');
 
   return (
-    <div
+    <button
       className={cardClasses}
       onClick={onClick}
       style={style}
+      type="button"
     >
       <div className="card-inner">
         <div className="card-front" />
@@ -27,7 +28,7 @@ const CardComponent: React.FC<CardProps> = ({ card, onClick, style }) => {
           {card.emoji}
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
