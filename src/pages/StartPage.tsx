@@ -41,7 +41,7 @@ const StartPage: React.FC = () => {
 
   return (
     <div className="start-page">
-      <h1 className="title">Let's test how good your memory is?</h1>
+      <h1 className="title">Let&apos;s test how good your memory is?</h1>
       
       <div className="selection-container">
         <CategorySelector

@@ -6,7 +6,7 @@ export interface Card {
 }
 export interface Emoji {
   htmlCode: string[];
-  [key: string]: any;
+  [key: string]: unknown;
 }
 export interface GameStats {
   moves: number;

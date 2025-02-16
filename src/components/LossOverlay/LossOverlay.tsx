@@ -19,8 +19,8 @@ export const LossOverlay: React.FC<LossOverlayProps> = ({
 }) => (
   <div className="loss-overlay">
     <div className="loss-content">
-      <h2>Time's Up!</h2>
-      <p>You didn't complete the game within {formatTime(timeLimit)}</p>
+      <h2>Time&apos;s Up!</h2>
+      <p>You didn&apos;t complete the game within {formatTime(timeLimit)}</p>
       <div className="stats">
         <div className="stat-item">
           <span>Time Taken:</span>
